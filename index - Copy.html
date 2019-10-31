@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day Planner</title>
+
+<!-- Added link to the jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Added a link to Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!--Font Awesome link for bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+<body>
+
+<div class="container">
+
+
+    <div class="row">
+            <h1 class="text-center">
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                Work Day Scheduler
+            </h1>
+            <div>
+            <h5 class="text-center">Schedule your work day according to the hour and save events</h5>
+            </div>
+            <h5>Date & time</h5>
+        
+
+        <div class="container">
+        <!--Create a row and container ref calculator outline-->
+            <div class="row">
+                <div class="col-sm-2">Time</div>                    
+                <div class="col-sm-8 text-center">Event</div>
+                <div class="col-sm-2 text-right">Save</div>
+            </div>
+
+            <div class="container">
+            <div class="row">
+                    <div class="col-sm-2">Time</div>
+                    <form>
+                    <input id="nine" class="col-sm-8"/>
+                    </form>
+                    <button class="col-sm-2 text-right nine">Save</button>
+            </div>
+            
+
+            <div class="row">
+                    <div class="col-sm-2">Time</div>                    
+                    <input class="col-sm-8 text-center" id="ten"/>
+                    <button class="col-sm-2 text-right ten">Save</button>
+            </div>
+            </div>
+    </div>
+</div>
+<!-- Added a link to our external javascript page-->
+<script type="text/javascript" src="assets/javascript.js"></script>
+</body>
+</html>
