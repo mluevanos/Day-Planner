@@ -65,30 +65,47 @@ document.getElementById("clock").innerHTML = d;
 
 let itemsArray = []
 
-const data = JSON.parse(localStorage.getItem("items"))
+// const data = JSON.parse(localStorage.getItem("items"))
 
 var buttons = document.getElementsByTagName("button");
 console.log(buttons);
 
 for (i = 0; i < buttons.length; i++) {
 
-    var timeslot = buttons[i].className
-    const input = document.getElementByTagName("textarea").value
-    
+        // className = buttons[i].className
 
-    buttons[i].addEventListener("click", function() {
+        buttons[i].addEventListener("click", function() {
 
-    var timeslot = timeslot
-    var input = input
+        var timeslot = this.className;
+        const input = document.getElementById(timeslot).value
 
-    itemsArray.push(input.value)
-    localStorage.setItem(timeslot, JSON.stringify(input.value))
-    console.log(itemsArray);
+        // itemsArray.push(input)
+        localStorage.setItem(timeslot, JSON.stringify(input))
+        // console.log(itemsArray);
+        console.log(input);
     })
 }
 
 document.getElementById("nine").value = JSON.parse(localStorage.getItem("nine"));
-document.getElementById("ten").value = JSON.parse(localStorage.getItem("ten"))
+document.getElementById("ten").value = JSON.parse(localStorage.getItem("ten"));
+document.getElementById("eleven").value = JSON.parse(localStorage.getItem("eleven"));
+document.getElementById("twelve").value = JSON.parse(localStorage.getItem("twelve"));
+document.getElementById("one").value = JSON.parse(localStorage.getItem("one"));
+document.getElementById("two").value = JSON.parse(localStorage.getItem("two"));
+document.getElementById("three").value = JSON.parse(localStorage.getItem("three"));
+document.getElementById("four").value = JSON.parse(localStorage.getItem("four"));
+document.getElementById("five").value = JSON.parse(localStorage.getItem("five"));
 
-console.log(data);
 
+
+//Another loop to cycle through table rows, 
+
+var rows = document.querySelectorAll(".time");
+var rowsTime = rows.text;
+console.log(rows);
+
+//test for time before or after the time it is. 
+
+//Compare the time with the hour I am going to get with moment.js. 
+
+//import like jQuery find on moments website
